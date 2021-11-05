@@ -22,7 +22,7 @@ cp synoconfigs/apollolake .config
 echo '+' > .scmversion
 make oldconfig ; make modules_prepare
 cd ..
-make LINUX_SRC=${linuxsrc}
+make LINUX_SRC=${linuxsrc} dev-v6
 read -a KVERS <<< "$(modinfo --field=vermagic redpill.ko)" && cp -fv redpill.ko ../redpill-load/ext/rp-lkm/redpill-linux-v${KVERS[0]}.ko || exit 1
 cd ..
 
