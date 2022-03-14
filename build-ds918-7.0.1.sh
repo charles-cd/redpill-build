@@ -8,7 +8,7 @@ cd /root && rm -rf dsm && mkdir dsm && cd ./dsm
 
 # 下载 redpill
 git clone https://github.com/RedPill-TTG/redpill-lkm.git
-git clone https://github.com/gxw1141446823/redpill-load-3.git
+git clone https://github.com/gxw1141446823/redpill-load.git
 
 # 下载群晖 toolkit
 curl --location "https://sourceforge.net/projects/dsgpl/files/toolkit/DSM7.0/ds.apollolake-7.0.dev.txz/download" --output ds.apollolake-7.0.dev.txz
@@ -19,7 +19,7 @@ tar -C./apollolake/ -xf ds.apollolake-7.0.dev.txz usr/local/x86_64-pc-linux-gnu/
 # 编译 redpill-lkm
 cd redpill-lkm
 make LINUX_SRC=../apollolake/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib/modules/DSM-7.0/build dev-v7
-read -a KVERS <<< "$(modinfo --field=vermagic redpill.ko)" && cp -fv redpill.ko ../redpill-load-3/ext/rp-lkm/redpill-linux-v${KVERS[0]}.ko || exit 1
+read -a KVERS <<< "$(modinfo --field=vermagic redpill.ko)" && cp -fv redpill.ko ../redpill-load/ext/rp-lkm/redpill-linux-v${KVERS[0]}.ko || exit 1
 cd ..
 
 # 编译 redpill-load
