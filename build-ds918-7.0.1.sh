@@ -8,7 +8,7 @@ cd /root && rm -rf dsm && mkdir dsm && cd ./dsm
 
 # 下载 redpill
 git clone https://github.com/RedPill-TTG/redpill-lkm.git
-git clone https://github.com/jumkey/redpill-load.git
+git clone https://github.com/gxw1141446823/redpill-load-1.git
 
 # 下载群晖 toolkit
 curl --location "https://sourceforge.net/projects/dsgpl/files/toolkit/DSM7.0/ds.apollolake-7.0.dev.txz/download" --output ds.apollolake-7.0.dev.txz
