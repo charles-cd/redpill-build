@@ -1,4 +1,4 @@
-name: Build RedPill DSM loader
+name: 构建RedPill DS918+ DSM7.0.1-42218引导
 
 on: workflow_dispatch
 
